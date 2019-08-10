@@ -9,10 +9,6 @@ both file and interactive modes of execution
 
 public abstract class ExecutionDriver {
 
-    public String execute_parkinglot(String inputcommand){
-        return null;
-    }
-
     //Implementing method overloading to handle file and interactive modes
     public  void execute(){
 
@@ -23,10 +19,10 @@ public abstract class ExecutionDriver {
     }
 
     //method to execute parkingLot event based upon input command
-    Parking_Allocator Park_event =null;
+   Parking_Allocator Park_event =null;
+
     //Implementing Common menthod Implement_parkinglot menthod on
     //Both File and Interactive modes
-
     protected String parkinglot_events(String input_command) {
         Car car;
         String[] input_split=input_command.split(" ");
@@ -55,30 +51,29 @@ public abstract class ExecutionDriver {
 
                 case "park":
                     car = new Car(input_split[1], input_split[2]);
-
-                    String ParkingCarStatus= Parking_Allocator.park(car);
+                    String ParkingCarStatus= Park_event.park(car);
                     return ParkingCarStatus;
 
                 case "leave":
-                    String leave_Status= Parking_Allocator.leave(input_split[1]);
+                    String leave_Status= Park_event.leave(input_split[1]);
                     return leave_Status;
 
                 case "status":
-                    String parking_status= Parking_Allocator.status();
+                    String parking_status= Park_event.status();
                     String display_Status = parking_status.substring(1, parking_status.length() - 1);
                     return (display_Status.replaceAll(",",""));
 
 
                 case "registration_numbers_for_cars_with_colour":
-                    String regByColor= Parking_Allocator.getregnumsByColor(input_split[1]);
+                    String regByColor= Park_event.getregnumsByColor(input_split[1]);
                     return regByColor;
 
                 case "slot_numbers_for_cars_with_colour":
-                    String SlotnumsByColor= Parking_Allocator.getSlotnumsByColor(input_split[1]);
+                    String SlotnumsByColor= Park_event.getSlotnumsByColor(input_split[1]);
                     return SlotnumsByColor;
 
                 case "slot_number_for_registration_number":
-                    String SlotByRegnum= Parking_Allocator.getSlotByRegnum(input_split[1]);
+                    String SlotByRegnum= Park_event.getSlotByRegnum(input_split[1]);
                     return SlotByRegnum;
 
                 case "exit":
