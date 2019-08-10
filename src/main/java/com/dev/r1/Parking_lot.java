@@ -9,7 +9,9 @@ import java.io.InputStreamReader;
 
 /**
  * Invoking the driver class based upon number of arguments passed
- *
+ * without arguments invokes interactiveDriver class
+ * with one argument invokes FileDriver class
+ * else throws an exception
  */
 public class Parking_lot
 {
@@ -17,7 +19,10 @@ public class Parking_lot
     {
         ExecutionDriver ed;
         try {
-            if (args.length > 1) {
+            if(args.length>1){
+                throw new IllegalArgumentException("arguments must be one or none");
+            }
+            if (args.length == 1) {
                 ed = new FileDriver(args[0]);
                 ed.execute();
             } else {
