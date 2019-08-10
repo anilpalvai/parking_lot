@@ -1,4 +1,4 @@
-package com.dev.r1.com.parkinglot.vehicle;
+package com.dev.r1.Vehicles;
 
 public class Car extends Vehicle {
     String car_color;
