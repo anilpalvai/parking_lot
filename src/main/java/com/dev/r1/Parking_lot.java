@@ -25,7 +25,7 @@ public class Parking_lot
                     BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
                     String input = bufferRead.readLine();
                     ed = new InteractiveDriver();
-                    ed.execute("input");
+                    ed.execute(input);
                 }
             }
         }catch (Exception e){
