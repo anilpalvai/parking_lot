@@ -4,18 +4,24 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
+/*
+FileDriver class to handle inputs from inputfile path
+1) if input command is valid,it writes result on console
+2) if not it writes error message on console
+ */
+
 public class FileDriver extends ExecutionDriver {
-    String inputfilepath;
+    String inputFilePath;
 
     public FileDriver(String input_path) {
-        this.inputfilepath = input_path;
+        this.inputFilePath = input_path;
 
     }
 
     @Override
     public void execute() {
         try {
-            File f = new File(inputfilepath);
+            File f = new File(inputFilePath);
             BufferedReader b = new BufferedReader(new FileReader(f));
             String readLine = "";
             while ((readLine = b.readLine()) != null) {
