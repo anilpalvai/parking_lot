@@ -11,7 +11,7 @@ Please run below command sequentially from the Parking_lot folder
 Filemode:
     1) bin/setup
     2) bin/parking_lot <inputfile_path>
-    3) For funtionality test: "bin/run_functional_tests
+    3) For functionality test: "bin/run_functional_tests
     
 Interactive mode:
     1) bin/setup
