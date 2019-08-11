@@ -13,27 +13,25 @@ import java.io.InputStreamReader;
  * with one argument invokes FileDriver class
  * else throws an exception
  */
-public class Parking_lot
-{
-    public static void main( String[] args ) throws Exception
-    {
-        ExecutionDriver ed;
+public class Parkinglotmain {
+    public static void main(String[] args) throws Exception {
+        ExecutionDriver execute_driver;
         try {
-            if(args.length>1){
+            if (args.length > 1) {
                 throw new IllegalArgumentException("arguments must be one or none");
             }
             if (args.length == 1) {
-                ed = new FileDriver(args[0]);
-                ed.execute();
+                execute_driver = new FileDriver(args[0]);
+                execute_driver.execute();
             } else {
                 while (true) {
                     BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
                     String input = bufferRead.readLine();
-                    ed = new InteractiveDriver();
-                    ed.execute(input);
+                    execute_driver = new InteractiveDriver();
+                    execute_driver.execute(input);
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             System.exit(1);
         }
