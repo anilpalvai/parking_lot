@@ -25,10 +25,10 @@ public class FileDriver extends ExecutionDriver {
             BufferedReader b = new BufferedReader(new FileReader(f));
             String readLine = "";
             while ((readLine = b.readLine()) != null) {
-                String output_status = super.parkinglot_events(readLine);
-                if(output_status!=null) {
-                    System.out.println(output_status);
-                }else{
+                String outputStatus = super.parkinglotEvents(readLine);
+                if (outputStatus != null) {
+                    System.out.println(outputStatus);
+                } else {
                     System.out.println("Result not found");
                 }
 
@@ -38,6 +38,7 @@ public class FileDriver extends ExecutionDriver {
             e.printStackTrace();
             System.exit(1);
         }
+
 
     }
 }

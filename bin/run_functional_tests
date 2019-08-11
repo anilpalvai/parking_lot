@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+mvn -f ../pom.xml -Dtest=com.dev.r1.Main test -q

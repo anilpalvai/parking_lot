@@ -1,10 +1,12 @@
 package com.dev.r1.ParkingLotDrivers;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class ParkingAllocatorTest {
+
     static ExecutionDriver ed;
 
     @BeforeClass
@@ -26,10 +28,7 @@ public class ParkingAllocatorTest {
         assertEquals("Allocated slot number: 6", status6);
         String status7 = ed.execute("park DL-12-AA-9999 White");
         assertEquals("Sorry, parking lot is full", status7);
-
-
     }
-
 
     @Test
     public void testLeaveSlot() throws Exception {
@@ -56,6 +55,5 @@ public class ParkingAllocatorTest {
         String regByColot_Notfound = ed.execute("slot_number_for_registration_number MH-04-AY-1111");
         assertEquals("Not found", regByColot_Notfound);
     }
-
 
 }

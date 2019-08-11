@@ -6,16 +6,16 @@ InteractiveDriver class to handle inputs from system input
  */
 public class InteractiveDriver extends ExecutionDriver {
     @Override
-    public String execute(String input_command) {
+    public String execute(String inputCommand) {
         try {
-            String parkingLot_status = super.parkinglot_events(input_command);
-            if(parkingLot_status!=null) {
-                System.out.println(parkingLot_status);
+            String parkingLotStatus = super.parkinglotEvents(inputCommand);
+            if(parkingLotStatus!=null) {
+                System.out.println(parkingLotStatus);
             }else{
                 System.out.println("Result not found");
                 return "Result not found";
             }
-            return parkingLot_status;
+            return parkingLotStatus;
 
         } catch (Exception e) {
             e.printStackTrace();

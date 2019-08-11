@@ -23,7 +23,7 @@ public abstract class ExecutionDriver {
 
     //Implementing Common menthod Implement_parkinglot menthod on
     //Both File and Interactive modes
-    protected String parkinglot_events(String input_command) {
+    protected String parkinglotEvents(String input_command) {
         Car car;
         String[] input_split = input_command.split(" ");
 
