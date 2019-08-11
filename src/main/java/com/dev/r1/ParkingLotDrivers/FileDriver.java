@@ -20,7 +20,11 @@ public class FileDriver extends ExecutionDriver {
             String readLine = "";
             while ((readLine = b.readLine()) != null) {
                 String output_status = super.parkinglot_events(readLine);
-                System.out.println(output_status);
+                if(output_status!=null) {
+                    System.out.println(output_status);
+                }else{
+                    System.out.println("Result not found");
+                }
 
             }
 

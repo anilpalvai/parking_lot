@@ -15,20 +15,20 @@ import java.io.InputStreamReader;
  */
 public class Parkinglotmain {
     public static void main(String[] args) throws Exception {
-        ExecutionDriver execute_driver;
+        ExecutionDriver executionDriver;
         try {
             if (args.length > 1) {
                 throw new IllegalArgumentException("arguments must be one or none");
             }
             if (args.length == 1) {
-                execute_driver = new FileDriver(args[0]);
-                execute_driver.execute();
+                executionDriver = new FileDriver(args[0]);
+                executionDriver.execute();
             } else {
                 while (true) {
                     BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
                     String input = bufferRead.readLine();
-                    execute_driver = new InteractiveDriver();
-                    execute_driver.execute(input);
+                    executionDriver = new InteractiveDriver();
+                    executionDriver.execute(input);
                 }
             }
         } catch (Exception e) {
