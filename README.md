@@ -1,12 +1,12 @@
 # parking_lot Project for Gojek
 
-#Overview
 This Java Maven project is to handle two modes of Driver files
 1)Filemode, where we have to pass the list of input commands
 2)Interactive mode to pass commands from console
 
 
-#How to Run
+#How to Run:
+
 Please run below command sequentially from the Parking_lot folder
 Filemode:
     1) bin/setup
