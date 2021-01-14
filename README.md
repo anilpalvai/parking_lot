@@ -1,4 +1,4 @@
-# parking_lot Project for Gojek
+# parking_lot
 
 This Java Maven project is to handle two modes of Driver files
 1)Filemode, where we have to pass the list of input commands
